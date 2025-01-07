@@ -1,4 +1,11 @@
 {
   "extends": "./tsconfig",
-  "exclude": ["example", "lib"]
+  "exclude": ["example", "lib", "**/__tests__/**"],
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationDir": "lib/typescript",
+    "emitDeclarationOnly": true,
+    "noEmit": false
+  }
 }

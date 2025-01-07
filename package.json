@@ -5,11 +5,11 @@
   "source": "src/index.tsx",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
-  "types": "lib/typescript/index.d.ts",
+  "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index.tsx",
   "exports": {
     ".": {
-      "types": "./lib/typescript/index.d.ts",
+      "types": "./lib/typescript/src/index.d.ts",
       "import": "./lib/module/index.js",
       "require": "./lib/commonjs/index.js"
     }
@@ -197,5 +197,5 @@
     "type": "fabric-view",
     "version": "0.45.5"
   },
-  "typings": "lib/typescript/index.d.ts"
+  "typings": "lib/typescript/src/index.d.ts"
 }
