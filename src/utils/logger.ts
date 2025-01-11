@@ -1,11 +1,19 @@
 type Listener = () => void;
 
+interface LogEntry {
+  text: string;
+  timestamp: Date;
+}
+
 class Logger {
-  private logs: string[] = [];
+  private logs: LogEntry[] = [];
   private listeners: Set<Listener> = new Set();
 
   addLog(log: string) {
-    this.logs.push(log);
+    this.logs.push({
+      text: log,
+      timestamp: new Date(),
+    });
     this.notifyListeners();
   }
 

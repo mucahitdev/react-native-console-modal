@@ -10,27 +10,24 @@ export default function App() {
   // console.error('Bir hata!');
   const [count, setCount] = useState(0);
 
-  // exapmple fetch
-  const [data, setData] = useState(null);
-
-  const fetchData = async () => {
-    const response = await fetch(
-      'https://jsonplaceholder.typicode.com/todos/1'
-    );
-    const json = await response.json();
-    setData(json);
+  const handleNoLog = () => {
+    console.log('Hello from console.log dwnajd awhdanwd adwahwdh wadhahw!');
   };
 
   return (
     <View style={styles.container}>
       <Text>Open the console to see logs.</Text>
       <Text>Count: {count}</Text>
-      <Text>Fetch: {JSON.stringify(data)}</Text>
       <Button title="Increment" onPress={() => setCount(count + 1)} />
-      <Button title="Fetch data" onPress={fetchData} />
+      <Button title="Trigger Normal Log" onPress={handleNoLog} />
       <Button
         title="Trigger console.log"
-        onPress={() => console.log('Hello from console.log! ' + count)}
+        onPress={() =>
+          console.warn(
+            'Hello from console.log! awdbahwdhbaw dawhbdhabhwd awwdhbawydbab wdahwdbabwd awhdbabvwd awdbaydwb awduawbduahudguawbdbawd\n wdbauwdbuaw dawbduıawbd awwdaıuwbduawd awwdhuawhdua wdaıwwudbuabwd aduawıdub222' +
+              count
+          )
+        }
       />
       <LogViewer />
     </View>
